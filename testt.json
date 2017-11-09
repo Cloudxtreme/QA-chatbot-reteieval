@@ -1,0 +1,149 @@
+{"intents": [
+	{"tag": "greetings",
+         "patterns": ["Hi","hai","Is anyone there?", "Hello", "Are you there","what is happening","how is it going","great to see you","Nice to see you"],
+         "responses": ["Hi there, how can I help?"]
+        },
+	{"tag": "timings",
+         "patterns": ["which timings are open for bank?","bank opening timings are","working hours","what are your bank work timings"],
+         "responses": ["usually opens at 9 am and close at 6 pm", "9am-6pm"],
+	 "context_set":"timings hours"
+        },
+	{"tag": "lunch",
+         "patterns": ["what is the lunch times?","lunch timmings","at what time bank will be closed for lunch"],
+         "responses": ["after noon 1 pm-2 pm bank will be closed for lunch time for bank empolyees"],
+	 "context_set":"lunch time"
+        },
+	{"tag": "workdays",
+         "patterns": ["what are the working days of a bank?","working days of a bank?","how many days bank will be opend"],
+         "responses": ["from monday to friday "],
+	 "context_set":"workdays bank"
+        },
+	{"tag": "headoffice ",
+         "patterns": ["head office of this bank?"],
+         "responses": ["in new Delhi the head office is located "],
+	 "context_set":"head office"
+        },
+	{"tag": "contactcustomercare ",
+         "patterns": ["how can i contact a customer support?"," contact a customer care support?"],
+         "responses": ["you can contact though all the contact numbers mentioned in a bank details like:040-8899637676"],
+	 "context_set":"customercare support number"
+        },
+	{"tag": "holi",
+         "patterns": ["when BANKS will close other than normal days?","mention the bank holidays","bank holidays"],
+         "responses": ["usually banks will be closed in weekends and all the governament holidays which are announced by governament."],
+	 "context_set":"holi bank"
+        },
+	{"tag": "typesAccount",
+         "patterns": ["types of bank accounts","what are the different types of bank account","how many types of accounts are available","account types"],
+         "responses": ["Current Account,Savings Bank Account,Savings Plus Account ,Term Deposits,Basic Banking 'No frills Account',Recurring Deposit Account ,Special Term Deposits ,Rate of Interest on Domestic Term Deposits,Multi Option Deposit Scheme,Demat account"],
+	 "context_set":"accounttypes"
+        },
+	{"tag": "openaccount",
+         "patterns": ["how can i open an account in your bank?","procedure to open an account","opening an account?","how to apply for an account?"],
+         "responses": ["Fill up and submit the required details online,Print the Account Opening Form (AOF) on A4 size white papers,Attach the required documents, such as photographs and proof of identity and address, as mentioned in the AOF,A TCRN (Temporary Customer Reference Number) will be generated, which please note down. TCRN will also be sent on the registered mobile number of the applicant(s)."],
+	 "context_set":"accountopen"
+        },
+	{"tag": "proofsdocuments",
+         "patterns": ["which types of proofs documents i need to submit for a loan?","what type of documents  proofs are required for a account"],
+         "responses": ["Required Documents are ----- AadharCard,PAN card,address proof,photos. anf If Require we need other documents like bank statements,working Details.....etc "],
+	 "context_set":"documents submit"
+        },
+	{"tag": "eligibleaccount",
+         "patterns": ["who are eligible to open an account"],
+         "responses": ["If you're under 18, some banks might require your parents to sign some forms when you make your account. Not all banks do this, so if you don't want your parents to be involved with your banking, try emailing banks before you go into them asking whether they require your parents to sign."],
+	 "context_set":"eligibleaccount open"
+        },
+	{"tag": "currentaccount",
+         "patterns": ["who can open an current account","who are eligible to open an current account?"],
+         "responses": ["Current Accounts can be opened by individuals, partnership firms, private and public limited companies, HUF specified associations, societies, trusts etc."],
+	 "context_set":"current account eligibble open"
+        },
+	{"tag": "Savings",
+         "patterns": ["What is Savings Account","savings account means"],
+         "responses": ["Savings account funds are considered one of the most liquid investments apart from cash."],
+	 "context_set":"savingAccount means"
+        },
+	{"tag": "plusaccount",
+         "patterns": ["How to open savings account"],
+         "responses": ["Fill the  saving plus application form  and submit required ..aadhar, n all  at bank or apply at www.sbi.com "],
+	 "context_set":"savingAccount open"
+        },
+	{"tag": "meanscurrent",
+         "patterns": ["What is current Account","current account means"],
+         "responses": ["It is defined as the sum of the balance of trade (goods and services exports less imports), net income from abroad and net current transfers."],
+	 "context_set":"meanscurrentaccount means"
+        },
+	{"tag":"difference",
+	 "patterns":["difference between current and savings account"],
+	 "responses":["Savings account is an interest-bearing account with certain limitations. For example, in the US you cannot withdraw money from it more than 6 times a month. Here is the explanation why. Current account is a general-use account on which you can write checks, use ATM/Debit cards and have unlimited transactions."],
+	 "context_set": "differenccurrentandsavingsaccount "
+	},
+	{"tag": "PlusAccount",
+         "patterns": ["How to open savings plus account?","how did u get the savings plus account"],
+         "responses": ["Fill the  saving plus application form  and submit required..aadhar, n all  at bank or apply at www.sbi.com "],
+	 "context_set":"savingplus account"
+        },
+	{"tag": "deposite",
+         "patterns": ["what is deposite account?","deposite account means"],
+         "responses": ["A deposit account is a savings account, current account or any other type of bank account that allows money to be deposited and withdrawn by the account holder"],
+	 "context_set":"deposite means"
+        },
+	{"tag": "Depository",
+         "patterns": ["How do I open a Depositary account?"],
+         "responses": ["A Depository account can be opened with one of the participants of NSDL/CDSL by filling an Account Opening Form and receiving an account number."],
+	 "context_set":"Depository"
+        },
+	{"tag": "Demataccount",
+         "patterns": ["How do I open a Demat account?"],
+         "responses": ["To open a demat account, you have to approach a depository participant (DP), an agent of depository, and fill up an account opening form. The list of DPs is available in the websites of depositories: CDSL (Central Depository Services (India) Ltd and NSDL (National Securities Depository Ltd)"],
+	 "context_set":"Demat"
+        },
+	{"tag": "checkingaccount",
+         "patterns": ["what is checking account"],
+         "responses": ["checkingaccount is direct approach to banking, without compromising on features. The low monthly fee means you don’t have to worry about special requirements like monthly balances or direct deposit."],
+	 "context_set":"checkingaccount open decsribe about"
+        },
+	{"tag": "checking",
+         "patterns": ["how do I open checkingaccount"],
+         "responses": ["you open an account at branch by filling an appilication and submiting required  or online www.sbi.co.in/checkopenform or through Internet banking i'e login>eservices>checking account "],
+	 "context_set":"checkingaccount open"
+        },
+	{"tag": "fixeddeposit",
+         "patterns": ["what is fixed deposit ","what is FD"],
+         "responses": ["A fixed deposit (FD) is a financial instrument provided by banks or NBFCs which provides investors with a higher rate of interest than a regular savings account, until the given maturity date"],
+	 "context_set":"fixed explain"
+        },
+	{"tag": "fixed",
+         "patterns": ["how do I open fixed deposit","how do I open FD"],
+         "responses": ["you open an account at branch by filling an appilication and submiting required  or online www.sbi.co.in/fixedopenform or through Internet banking i'e login>eservices>fixedDeposit"],
+	 "context_set":"fixeddeposit openfixed"
+        },
+	{"tag": "Recurring Deposit",
+         "patterns": ["what is Recurring Deposit account","what is RD"],
+         "responses": ["Recurring Deposit is a special kind of Term Deposit offered by banks in India which help people with regular incomes to deposit a fixed amount every month into their Recurring Deposit account and earn interest at the rate applicable to Fixed Deposits. ... Minimum Period of RD is 6 months and maximum is 10 years."],
+	 "context_set":"Recurring"
+        },
+	{"tag": "Recurring",
+         "patterns": ["how do I open  Recurring Deposit","how do I open RD"],
+         "responses": ["you open an account at branch by filling an appilication and submiting required papers  or online www.sbi.co.in/Recurringopenform or through Internet banking i'e login>eservices>RecurringDeposit"],
+	 "context_set":"RecurringDeposit"
+        },
+	{"tag": "Loan",
+         "patterns": ["What is Loan","what is loan account"],
+         "responses": ["a thing that is borrowed, especially a sum of money that is expected to be paid back with interest. The loan account is used to track transactions related to the loan, which include interest, repayment, and any applicable charges. The loan account is a specific instance of a loan product, with a specified interest rate and an account number, and it is owned by a specified MFI customer."],
+	 "context_set":"loan"
+        },
+	{"tag": "loanaccount",
+         "patterns": ["How do I open loan account","how to apply for Loan"],
+         "responses": ["you apply  an at branch by filling an appilication and submiting requiredpapersor online www.sbi.co.in/Loanopenform or through Internet banking ie login>eservices>loanaccount "],
+	 "context_set": "loan account"
+        }
+   ]
+}
+
+	
+	
+	
+	
+	
+	
