@@ -1,9 +1,12 @@
 # things we need for NLP
 import nltk
-from nltk.stem.lancaster import LancasterStemmer
-stemmer = LancasterStemmer()
-from sklearn.feature_extraction import stop_words
-stemmer = LancasterStemmer()
+#from nltk.stem.lancaster import LancasterStemmer
+#stemmer = LancasterStemmer()
+from nltk.stem.snowball import SnowballStemmer
+stemmer = SnowballStemmer('english')
+#from sklearn.feature_extraction import stop_words
+
+
 
 # things we need for Tensorflow
 import numpy as np
@@ -13,7 +16,7 @@ import random
 
 # import our chat-bot intents file
 import json
-with open('/home/saraswathi/Desktop/testt.json') as json_data:
+with open('/home/kusuma/Downloads/ashok.json') as json_data:
     intents = json.load(json_data)
 
 words = []
@@ -43,6 +46,7 @@ classes = sorted(list(set(classes)))
 print (len(documents), "documents")
 print (len(classes), "classes", classes)
 print (len(words), "unique stemmed words", words)
+
 # create our training data
 training = []
 output = []
@@ -56,7 +60,7 @@ for doc in documents:
     # list of tokenized words for the pattern
     pattern_words = doc[0]
     # stem each word
-    pattern_words = [stemmer.stem(word.lower()) for word in pattern_words]
+    pattern_words = [stemmer.stem(word) for word in pattern_words]
     # create our bag of words array
     for w in words:
         bag.append(1) if w in pattern_words else bag.append(0)
@@ -74,6 +78,7 @@ training = np.array(training)
 # create train and test lists
 train_x = list(training[:,0])
 train_y = list(training[:,1])
+
 # reset underlying graph data
 tf.reset_default_graph()
 # Build neural network
@@ -84,19 +89,21 @@ net = tflearn.fully_connected(net, len(train_y[0]), activation='softmax')
 net = tflearn.regression(net)
 
 # Define model and setup tensorboard
-model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')
+model = tflearn.DNN(net, tensorboard_dir='tflearn_logs',checkpoint_path='/home/kusuma/PycharmProjects/contextualbot1/model/model.tflearn',max_checkpoints=1000)
 # Start training (apply gradient descent algorithm)
-model.fit(train_x, train_y, n_epoch=1000, batch_size=8, show_metric=True)
-model.save('/home/saraswathi/work/PycharmProjects/bank1/model/model.tflearn')
+model.fit(train_x, train_y, n_epoch=2000, batch_size=8, show_metric=True)
+model.save('/home/kusuma/PycharmProjects/contextualbot1/model/model.tflearn')
+
 
 def clean_up_sentence(sentence):
     # tokenize the pattern
     words = nltk.word_tokenize(sentence)
     #stopwords = ('what','why','ing','when','is','can','are','have','has','you','your','how','should','would','it','they','them','those','the','a','an','was','where','could','himself')
-    stop = (stop_words.ENGLISH_STOP_WORDS)
-    sentence_words = [word for word in words if word not in stop]
+    #stop = (stop_words.ENGLISH_STOP_WORDS)
+    sentence_words = [word for word in words if word]
     # stem each word
     sentence_words = [stemmer.stem(word.lower()) for word in sentence_words]
+    print(sentence_words)
     return sentence_words
 
 # return bag of words array: 0 or 1 for each word in the bag that exists in the sentence
@@ -114,10 +121,12 @@ def bow(sentence, words, show_details=False):
 
     return(np.array(bag))
 
-p = bow("is your shop open today?", words)
+p = bow("how do i open savings account?", words)
 print (p)
 print (classes)
+
 print(model.predict([p]))
+
 # save all of our data structures
 import pickle
 pickle.dump( {'words':words, 'classes':classes, 'train_x':train_x, 'train_y':train_y}, open( "training_data", "wb" ) )
