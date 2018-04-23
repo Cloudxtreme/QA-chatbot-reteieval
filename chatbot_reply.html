@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <p>Hi,how may help you </p>
+    <form method=post>
+            {% for line in conversations %}
+            <li>{{line}}</li>
+            {% endfor %}
+        </ul>
+      <p>Message: <input type=text name=sentence></p>
+         <input type=submit value=Send>
+    </form>
+
+{% endblock %}
+
+

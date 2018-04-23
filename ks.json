@@ -1,0 +1,894 @@
+{"intents": [
+        {"tag": "register",
+         "patterns": ["Hello I need to register for a class.","I would like to register for a class today.","Could you help me to register for a class?"],
+         "responses": ["okay, what class would you like to take?"]
+        },
+	{"tag": "greetings",
+         "patterns": ["Hi","hi there how are you", "How are you", "Is anyone there?", "Hello","goodmorning", "Good day","Whats up?","Are you there","Good evening","what is happening","how is it going","Good to see you","great to see you","Nice to see you","how is Everything"],
+         "responses": ["Hello, thanks for visiting","Good evening", "Good to see you again", "Hi there, how can I help?","hi,welcome to retrieval chatbot"]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later, thanks for visiting", "bye,Have a nice day", "Bye! Come back again soon."]
+        },
+	{"tag": "register1",
+         "patterns": [" I want to take a Psychology class.","I would very much enjoy taking a Psychology class.","Psychology class","Are there any Psych classes available?"],
+         "responses": ["I believe there are still two Psychology classes open."]
+        }, 
+	{"tag": "register2",
+         "patterns": ["Which days are these classes on?","On what days are the classes?","Can you tell me what days the classes are on?"],
+         "responses": ["One class is on Tuesday and Thursday from 2:00 p.m. - 4:00 p.m."]
+        },
+	{"tag": "register3",
+         "patterns": ["And the other class?","What about the other class?","Can you tell me about the other class?"],
+         "responses": ["The other class is on Monday and Wednesday from 10:00 a.m. to 12:00 p.m."]
+        },
+	{"tag": "register4",
+         "patterns": ["Are you sure these are the only open classes?","Are you sure there are no more open classes?","You're positive that these are the only classes left?"],
+         "responses": ["I'm positive."]
+        },
+	{"tag": "register5",
+         "patterns": ["Okay, sign me up for the class on Monday and Wednesday","Sign me up for Monday and Wednesday","The class on Monday and Wednesday will be fine."],
+         "responses": ["Okay, I'll sign you up"]
+        },  
+        {"tag": "Name",
+         "patterns": ["what is your name?", "who are you?","do you have any name?"],
+         "responses": ["i am a retireival bot."]
+        },
+	{"tag": "Father",
+         "patterns": ["who is your father?", "who created you?", "whats your father name?","who is your creator?","who developed you?"],
+         "responses": ["MCIS"]
+        }, 
+        {"tag": "Tools",
+         "patterns": ["what type of tools are used to create you", "which type of tools are present in your bot","what are you made of?","which materials you are composed of?"],
+         "responses": ["this is secret"]
+        },
+	{"tag": "Health",
+         "patterns": ["what is your health status", "how is your health condition now ","how about your health"],
+         "responses": ["yes i am good", "my health is good"]
+        },    
+        {"tag": "chatbot",
+         "patterns": ["what is chatbot", "what do you know about chatbot"],
+         "responses": ["chatbot is like a robot it will give answers like human"]
+        },
+	{"tag": "computer",
+         "patterns": [" what is a computer?"],
+         "responses": ["computer is an electronic device"]
+        },  
+        {"tag": "profile",
+         "patterns": ["What are your interests","what about your interests","what are you interested about","what are you interested in"],
+         "responses": ["I am interested in all kinds of things."]
+        },
+        {"tag": "invite",
+         "patterns": ["How are you doing today?","How are you?","How are things with you?"],
+         "responses": [" Great. Thanks."]
+        },
+	{"tag": "bankaccount",
+         "patterns": ["I would like to open a bank account","how to open my account"],
+         "responses": ["ok,What kind would you like to open?"]
+        },
+	{"tag": "bac1",
+         "patterns": ["What kind of account?","Do you know what kind of account you want to open?"],
+         "responses": ["I just need a checking account."]
+        },
+        {"tag": "bacc3",
+         "patterns": ["min balance for open account"],
+         "responses": ["$150"]
+        },
+	{"tag": "checks",
+         "patterns": ["I have a question."],
+         "responses": ["Whats your question?"]
+        },
+	{"tag": "checks1",
+         "patterns": ["How can I order new checks?"],
+         "responses": ["First, you need to fill out this application."]
+        },
+        {"tag": "Becoming A Customer",
+         "patterns": ["Who is eligible for this service?",""],
+         "responses": [" All resident Indians and non residents (NRI) residing in Gulf Co-operation Council (GCC) countries of United Arab Emirates,Saudi Arabia, Bahrain, Kuwait, Oman and Qatar are eligible to avail of this service."]
+        },       
+        {"tag": "BC1",
+         "patterns": ["How do I become an ICICIdirect customer? ","what is the process to become a icicdirect customer?"],
+         "responses": ["You can open an ICICIdirect e-Invest account by filling a single application form. This form will help you open an ICICIdirect Brokerage Account along with a Bank Account and one or more Demat accounts as required. "],
+         "context_set": ""
+        },
+        {"tag": "BC2",
+         "patterns": ["I have sent in my application, what happens next?"],
+         "responses": [" Your application will be processed and you will be informed once your application is accepted and all the required accounts are set up. In case your application is not processed because of lack of some details, you will be contacted by our representative or by mail."],
+         "context_set": ""
+        },
+        {"tag": "BC3",
+         "patterns": ["How do I request a form? "],
+         "responses": ["You can request our representative to visit you (Select Cities Only) by registering online through our website. You could also visit any of the following ICICI Bank Branches / Centres,where our trained personnel help you in becoming ICICIdirect e-Invest customer. Alternatively you can request us for a form by sending us an e-mail at helpdesk@icicidirect.com and our CSE will contact you to complete the initial account opening formalities."],
+         "context_set": ""
+        },
+        {"tag": "BC4",
+         "patterns": ["How do I know my application has been accepted? "],
+         "responses": ["You can check your account opening status on www.icicidirect.com on the customer service page under the ,Know your account status, section. We shall also inform you by e-mail in case your application has been accepte"],
+         "context_set": ""
+        },
+        {"tag": "BC5",
+         "patterns": ["Do I have to maintain any minimum balance in my Bank Account?"],
+         "responses": ["All the new bank accounts opened will have to maintain minimum Monthly Average Balance (MAB) of 5000/-. "],
+         "context_set": ""
+        },
+        {"tag": "BC6",
+         "patterns": ["What all documents will I receive once my ICICIdirect Account is opened ?"],
+         "responses": [" Once your ICICIdirect Account is opened you will get the following documents at your mailing address:  1. Pin-mailer containing the User Id and password for your ICICIdirect Account will be send by ICICI Securities Limited. 2. ICICI Bank Limited will dispatch the Cheque Book and ATM cum Debit Card in case a new saving account is opened. 3. Membership Guide and Internet Banking User ID and password for Demat Account will be dispatched by ICICI Bank Demat Services.  "],
+         "context_set": ""
+        },
+        {"tag": "BC7",
+         "patterns": ["When is a trading account termed as 'Inactive / Dormant' ?"],
+         "responses": ["A trading account in which no trades are done across any segment of any Exchange for six months would be termed as Dormant trading account. I- Sec does not freeze any  trading account. However any trade emanating from such trading accounts pursuant to the same being classified as Inactive or Dormanttrading account would be subject to necessary due diligences and confirmations as I-Sec may deem fit. "],
+         "context_set": ""
+        },
+        {"tag": "BCEXISTING",
+         "patterns": ["If I already have a ICICI Bank account and a ICICI Demat account, can I use these accounts for online investing?"],
+         "responses": ["Yes, you just need to tell us the account details and we shall link up your existing accounts with ICICIdirect e-Invest account for online investing. You can link up only an existing Bank account or only one or more Demat account(s) or both the existing Bank account and Demat Account(s). However, at present, your ICICI Bank account on which you have opted for Quantum Optima cannot be linked. Anyway, you can always opt to open a new Demat and Bank account with your ICICIdirect e-Invest account. "],
+         "context_set": ""
+        },
+        {"tag": " Bank Account",
+         "patterns": ["What type of Bank Account can I use with my e-invest account?"],
+         "responses": ["You will need an ordinary savings account with ICICI Bank Ltd for your e-Invest account. You can specify the account in the form and it will be linked with your e-Invest account. In case you do not have a ICICI Bank account, an online banking savings account can be opened with an e-Invest account."],
+         "context_set": ""
+        },
+       {"tag": "BA2",
+         "patterns": ["How frequently will I be able to know the status of my accounts? "],
+         "responses": ["The information of your Bank, Demat and e-Invest account shall be available to you completely online 24 hours a day through the Internet. You will be able to access all details regarding your orders and trades on the website. You will be able to see the results of your trade reflected in your Bank and Demat account on the trading +1 working day and trading +2 working days of the settlement, without waiting for the statements from the DP and the Bank."],
+         "context_set": ""
+        },
+        {"tag": "BA1",
+         "patterns": ["What is a ICICI Bank Online Banking account? "],
+         "responses": ["ICICI Bank's Online banking service is known as Infinity. The Bank account opened with your e-Invest account is an Infinity Bank account. Infinity service can be accessed on the website www.icicibank.com with a secure Logon Id and Password. Apart from allowing you to access your transaction history and current balance, Infinity allows you to transfer money from one account to another and also make online bill payments "],
+         "context_set": ""
+        },
+        {"tag": "icic",
+         "patterns": ["I am a new customer and have just been informed that my ICICIdirect e-invest account has been set up. How do I make my first trade?"],
+         "responses": ["Please check our comprehensive section on Trading Guide "],
+         "context_set": ""
+        },
+        {"tag": "deposit",
+         "patterns": ["I would like to deposit some money","I want to make a deposit today.","I will be depositing cash."],
+         "responses": ["Cash or check?"]
+        },
+      
+	{"tag": "creditcard",
+         "patterns": [" How can I avail Joining/Renewal/Milestone Vouchers?"," How can I avail Renewal Vouchers?"," How can I avail Milestone Vouchers?"],
+         "responses": ["If you are an SBI Card Elite, SBI Signature Card or SBI Platinum Cardholder, then you can avail the applicable vouchers after the payment of the annual fee, within 28 days by calling the SBI Card Customer Helpline number: 1860 180 1290 or 39 02 02 02 (Prefix local STD Code)"]
+        },
+	{"tag": "credit",
+         "patterns": ["What are the benefits available in FHF?","benefits available in FHF","there is any benifits in FHF"],
+         "responses": ["Family Health Floater Policy provides Hospitalization Expenses,Pre-Hospitalization Expenses,Post-Hospitalization Expenses,"]
+        },
+	{"tag": "FHF",
+         "patterns": ["Explain Floater benefit?","tell me about Floater benefit?","what are the Floater benefits?"],
+         "responses": ["The floater plan provides the advantage of the total sum insured floating between the members covered. Every member covered under this plan will be able to use the sum insured. Unlike the individual plan, the floater plan is cheaper and convenient for the whole family."]
+        },
+	{"tag": "HFHF",
+         "patterns": ["Is there any Master Health Checkup facility available in the policy?","we have any Master Health Checkup facility available in the policy?"],
+         "responses": ["Yes, a reimbursement up to ₹ 1500 per insured person is provided towards the cost of Master Health Checkup after every four consecutive claim free years of policy."]
+        },
+	{"tag": "FHFHF",
+         "patterns": ["Is pre-existing disease covered under the policy?"],
+         "responses": ["Pre-existing diseases are covered after 48 months of continuous insurance."]
+        },
+	{"tag": "Accident",
+         "patterns": [" What is Accident Shield policy","tell me about Accident Shield policy "],
+         "responses": ["Accident Shield is a worldwide covered Personal Accident policy (caused by external, violent and visible means) that is specially designed to cover death, permanent total disablement within 12 months from the date of accident."]
+        },
+	{"tag": "AccidentS",
+         "patterns": ["What is recovery benefit?"],
+         "responses": ["A fixed amount as monthly benefit is paid for every month up to 12 months, for accidents resulting in Permanent Total Disablement."]
+        },
+	{"tag": "AccidentSh",
+         "patterns": ["Is there any renewal benefit applicable in the policy?"],
+         "responses": ["The sum insured is increased by 5% to a maximum of 25% for each claim free year"]
+        },
+	{"tag": "AccidentSheild",
+         "patterns": ["What is the renewal age limit?"],
+         "responses": ["The policy is renewed for life long."]
+        },
+	{"tag": "Hospital Cash Insurance",
+         "patterns": ["What is the entry age limit under the policy of Hospital Cash Insurance"],
+         "responses": ["The entry age for an insured person is from 1 to 70 years. The proposer must have completed 18 years of age."]
+        },
+	{"tag": "HI",
+         "patterns": ["Can this policy be taken only if a health policy has already been taken?"],
+         "responses": ["There is no linkage to any medical insurance policy. The amount is paid even if the customer does not have a health insurance policy."]
+        },
+	{"tag": "HInsure",
+         "patterns": ["Are any bills needed to claim under this policy?"],
+         "responses": ["No bills are needed to claim under this policy. Proof of admittance in the hospital is sufficient (Discharge summary)."]
+        },
+	{"tag": "HIsnse",
+         "patterns": ["Is maternity and pre-existing diseases covered in this policy?"],
+         "responses": ["No, maternity and pre-existing diseases are not covered in this policy."]
+        },
+	{"tag": "cpp",
+         "patterns": [" what is CPP?"],
+         "responses": ["CPP is India’s first comprehensive card protection company, which covers the customer’s card in the event of card loss or stolen. CPP India is a subsidiary of CPP group headquartered in UK."]
+        },
+	{"tag": "cppa",
+         "patterns": ["How can I contact CPP?"],
+         "responses": ["You can contact us by calling the following contact numbers:6000-4000 (prefix city STD code)"]
+        },
+	{"tag": "cppaa",
+         "patterns": ["What do I do if my cards are lost or stolen?"],
+         "responses": ["Simply call 6000-4000 (prefix Local city STD code)"]
+        },
+	{"tag": "cpppaa",
+         "patterns": ["Which lost or stolen cards will be blocked?"],
+         "responses": ["All your lost or stolen debit or credit or ATM cards of all banks or card issuers issued in India will be blocked."]
+        },
+	{"tag": "cpap",
+         "patterns": ["What is the registration process?"],
+         "responses": ["After paying the fee, CPP will dispatch a welcome kit to you with your unique membership number on the same. There will also be a registration form that you need to fill and send back to CPP. Alternatively, you can call up CPP call centre to register your cards and documents."]
+        },
+	{"tag": "cp",
+         "patterns": ["Why should I get my Driving License & Passport Number registered?"],
+         "responses": ["In case you need your DL or Passport card number & you are not carrying them so just call us and we will provide you the required numbers."]
+        },
+	{"tag": "cpn",
+         "patterns": ["Why do need to register all my financial cards?"],
+         "responses": ["In case you lose all your cards, it will be easier for you and us to get the cards blocked ASAP."]
+        },
+	{"tag": "cpl",
+         "patterns": ["Does CPP cover my unregistered cards as well?"],
+         "responses": ["Yes, all registered and unregistered card under your name are covered under CPP membership."]
+        },
+	{"tag": "cpt",
+         "patterns": ["Do I have to repay the emergency travel assistance?"],
+         "responses": ["Yes, within 28 days."]
+        },
+	{"tag": "cptp",
+         "patterns": ["Do I have to pay any interest charges for advances in emergency travel assistance?"],
+         "responses": ["No, advances don’t attract any interest fee."]
+        },
+	{"tag": "cpsa",
+         "patterns": ["I have lost all my cash along with my cards, and I don't have any cash with me. Can I get help?"],
+         "responses": ["Yes, CPP can help you in this emergency. Just call us on our 24 X 7 helpline numbers 1800-419-4000 or 6000-4000 (affix STD code) and we will facilitate an emergency cash advance of up to ₹ 20,000."]
+        },
+	{"tag": "cpsk",
+         "patterns": ["How many cards can I register with CPP? How many cards can be blocked?"],
+         "responses": ["You can register all credit/debit cards with CPP that you hold. Also in event of loss, and should you want to block all of them, we will block all of them. There is no upper limit on card registration."]
+        },
+	{"tag": "cpka",
+         "patterns": ["In how much time will my claim be processed once I sent the documents?"],
+         "responses": ["Within 15 working days Insurance Company will approve/reject the claim & within 7 days we will send you the cheque (in case the claim is approved)."]
+        },
+	{"tag": "cpsas",
+         "patterns": [" What happens if I do not send the required documents within 74 days of reporting the fraud?"],
+         "responses": ["The claim will be cancelled."]
+        },
+	{"tag": "cpds",
+         "patterns": ["What is the coverage scope of CPP membership – Is it only in India?"],
+         "responses": ["All your features of card protection (except emergency cash) are provided whether you are in India or abroad."]
+        },
+	{"tag": "cpsds",
+         "patterns": ["What do I do if I lose my PAN card along with my other cards? "],
+         "responses": ["In case your PAN card is lost along with your cards and cash, we will facilitate free replacement of your PAN Card. All you need to do is send your necessary documents to us to coordinate on your behalf. This service is provided free of cost to you."]
+        },
+	{"tag": "Easymoney",
+         "patterns": ["What is Easy Money?"],
+         "responses": ["Easy Money facility on SBI Card empowers the cardholders to avail funds for short term at low rate of interest. The funds get delivered at your doorstep in the form of a cheque."]
+        },
+	{"tag": "Emone",
+         "patterns": ["How can I book Easy Money?"],
+         "responses": ["You can book Easy Money in 2 simple ways:Log in to your SBI Card online accounClick on the ‘Benefits’ link on the left hand navigation and select ‘Easy Money Enter details and confirm to book Easy Money instantly1860 180 1290"]
+        },
+	{"tag": "EMee",
+         "patterns": ["What are the plans available for Easy Money? "],
+         "responses": ["Currently, there is only 1 plan available for Easy Money:45 days with 2.45% per month"]
+        },
+	{"tag": "Em",
+         "patterns": ["How much money can I avail using this facility?"],
+         "responses": ["Easy Money can be booked for a minimum amount of ₹ 5000 to a maximum of up to 75% of your available cash limit."]
+        },
+	{"tag": "emp",
+         "patterns": ["Can I ask for a cheque or NEFT transfer for the Easy Money amount?"],
+         "responses": ["Currently, you can only get a cheque for the amount booked using Easy Money facility."]
+        },
+	{"tag": "emk",
+         "patterns": ["I have recently changed my address; can I book Easy Money?"],
+         "responses": ["Yes, you can request for Easy Money even if there is a change in address. However, your Easy Money booking request will be processed only after the new address has been successfully verified. If the verification check is unsuccessful, your Easy Money booking request will not be processed."]
+        },
+	{"tag": "es",
+         "patterns": ["I am an add-on cardholder; can I book Easy Money on my card?"],
+         "responses": ["No. Easy Money can only be booked on a primary card."]
+        },
+	{"tag": "mskk",
+         "patterns": ["I have already taken Easy Money for the amount that I was eligible for and now I want to book another Easy Money, how can I do it?"],
+         "responses": ["If you have already booked Easy Money for maximum eligible amount, you can book Easy Money only after you have paid back the amount of Easy Money booked in parts or full OR your cash limit gets extended. If"]
+        },
+	{"tag": "ems",
+         "patterns": ["What is the cancellation procedure for Easy Money?"],
+         "responses": ["You can call the SBI Card helpline on the below mentioned numbers in order to cancel your Easy Money booking:39 02 02 02,1860 180 1290"]
+        },
+	{"tag": "debit",
+         "patterns": ["What are the Debit Card of pnb ?","What are the Debit Card of punjabnationalbank ?"],
+         "responses": ["RuPay/Master Classic Debit Card,RuPay/Master Platinum Debit Card,RuPay Woman Power Saving Platinum Debit Card"]
+        },
+	{"tag": "debitc",
+         "patterns": ["How Can I Get A Debit Card ?","how to apply for debit card","what is the process of apply debit card"],
+         "responses": ["Debit card can be obtained from any CBS branch of PNB (irrespective of your account maintaining branch) by filling a Debit Card application form."]
+        },
+	{"tag": "debitb",
+         "patterns": ["I Have Not Received My Personalized Card Even After 10 Days"],
+         "responses": ["You should contact the Branch / call 011 – 2371002"]
+        },
+	{"tag": "debitcard",
+         "patterns": ["I Have Received The Debit Card But The PIN Is Not Legible ."],
+         "responses": ["You should contact the card issuing branch and request for a duplicate PIN. You can collect the Duplicate PIN from the branch after 7 working days."]
+        },
+	{"tag": "debitcards",
+         "patterns": ["How Does The Debit Card Work ?","propertoes of debit card"],
+         "responses": ["Insert your Debit card in ATM and follow the instructions"]
+        },
+	{"tag": "debitavg",
+         "patterns": ["What Is The Validity Of PNB Debit Card ?","what about the validity of PNB debit card"],
+         "responses": ["Debit Card is valid for 7 years"]
+        },
+	{"tag": "debiet",
+         "patterns": ["Are There Any Transaction Limits For The Debit Card ?","what are the limitations"],
+         "responses": ["Classic Debit card has maximum daily cash withdrawal limit at ATM- Rs. 25,000, POS/ECOM daily maximum limit- Rs. 60,000,Platinum/Woman Power Saver Debit card has maximum daily cash withdrawal limit at ATM- Rs. 50,000,POS/ECOM daily maximum limit- Rs. 1,25,000"]
+        },
+	{"tag": "debitcar",
+         "patterns": ["If Debit Card Is Lost What Should I Do ?","If Debit Card Is Lost Or Misplaced What Should I Do ?"],
+         "responses": ["You should immediately contac 1800 180 2222/18001032222"]
+        },
+	{"tag": "debitcard",
+         "patterns": ["Is There Any Fee For The Issuance Of Debit Card ?","what about the fee of debit card","what arecharges of debit card"],
+         "responses": ["PNB Debit Card is issued free of cost. However a nominal fee of Rs. 100 per Year will be levied after one year of Card issuance every year"]
+        },
+	{"tag": "debitca",
+         "patterns": ["Is There Any Charge Levied For Use Of The Card For Cash Withdrawal ?","what are the charges of withdrawal"],
+         "responses": ["No charge is levied for use of the card for cash withdrawal at PNB ATMs while Rs. 20/- is levied at other bank sharing ATMs under MITR, NFS"]
+        },
+	{"tag": "debitc",
+         "patterns": ["Can A Fresh Debit Card Issued In Lieu Of Lost Card And What Is The Amount To Be Charged ?","Can A Fresh Debit Card Issued In Lieu Of Damaged Card And What Is The Amount To Be Charged ?"],
+         "responses": ["Yes. Rs. 100/- for lost card while free of charge for replacement of damaged card."]
+        },
+	{"tag": "debitb",
+         "patterns": ["If Lost Card Is Subsequently Found And Restored To Cardholder, Can It Be Reactivated ?","If Lost Card Is Subsequently Traced And Restored To Cardholder, Can It Be Reactivated ?"],
+         "responses": ["card once hot listed / blocked cannot be re-activated. You can make a request for a fresh card."]
+        },
+	{"tag": "debiab",
+         "patterns": ["What Is Mini Statement ?","Mini Statement ?"],
+         "responses": ["It is a statement of account showing last 10 transactions made in the account through PNB ATM."]
+        },
+	{"tag": "debitba",
+         "patterns": ["How Should I Maintain The Secrecy Of PIN ?","how to maintain secrecy of PIN"],
+         "responses": ["If at any time you feel that the PIN has been inadvertently or otherwise divulged to any one you should change the same through any PNB ATM immediately."]
+        },
+	{"tag": "debitcah",
+         "patterns": ["How Often Can I Change The PIN ?","how to change pin"],
+         "responses": ["PIN can be changed any number of times."]
+        },
+	{"tag": "debitvardp",
+         "patterns": ["How Many Accounts Maximum Can Be Linked To My Debit Card ?","what are the maximum accounts to link to debit card"],
+         "responses": ["Maximum of 3 accounts held in the same name and same capacity can be linked to a Debit card"]
+        },
+	{"tag": "card",
+         "patterns": ["Does Bank Bear Any Liability For Unauthorized Use Of The Card ?","what is the Liability For Unauthorized Use Of The Card ?"],
+         "responses": ["No. The responsibility is solely vested with the cardholder."]
+        },
+	{"tag": "cvv",
+         "patterns": ["What Is CVV No. ?","cvv meaning"],
+         "responses": ["On the back of Debit card (Classic & Gold) there are 7 digits out of which the last 3 digits are the card CVV no. This no. can be used only for ecommerce transaction."]
+        },
+	{"tag": "addon",
+         "patterns": ["What Is Add-On Card Facility ?","add on facility"],
+         "responses": ["Any card holder can get 2 more Debit cards in the name of his / her spouse and dependent parents and children not below 18 years old. Debit card will be linked to the cardholder`s main account."]
+        },
+	{"tag": "debitvag",
+         "patterns": ["My Debit Card Doesn`T Work Successfully On ATMs","debit card doesn't work properly"],
+         "responses": ["You may be using the card before the expiry of 24 working hours of receipt of the card from the branch, the time required for activation of the card."]
+        },
+	{"tag": "debitcarlj",
+         "patterns": ["My Debit Card Works Successfully On PNB ATMs But Not On Other Bank`S ATMs."],
+         "responses": ["The problem may be due to connectivity failure at other bank ATM to PNB. Please try after some time when connectivity is restored. Alternately you may try another ATM nearby."]
+        },
+	{"tag": "debitg",
+         "patterns": ["My Debit Card Works Successfully On ATMs But Not At POS Terminals.","pos terminals"],
+         "responses": ["Connectivity failure at that particular time.,Weak card reader of POS"]
+        },
+	{"tag": "debitcagj",
+         "patterns": ["My Card Doesn`T Work On Few ATMs Of PNB. ?"],
+         "responses": ["The quality of the magnetic stripe of your card has been damaged / deteriorated due to which it is not accepted by few ATMs where the card reader may also be weak."]
+        },
+	{"tag": "NEFT",
+         "patterns": ["What Is NEFT ?","NEFT meaning"],
+         "responses": ["NEFT stands for `National Electronic Funds Transfer`. NEFT system is a nation wide funds transfer system to facilitate transfer of funds from any bank branch to any other bank branch."]
+        },
+	{"tag": "NEFT1",
+         "patterns": ["What Is The Funds Availability Schedule For The Beneficiary ?","Funds Availability Schedule For The Beneficiary ?"],
+         "responses": ["The fund transfer takes place within the same day if it within the cut-off time and the next working day if it is beyond the cut-off time prescribed. It is a batch settlement mode."]
+        },
+	{"tag": "NEFT2",
+         "patterns": ["Are All Bank Branches In The Country Part Of The NEFT Funds Transfer Network ?","All Bank Branches In The Country Part Of The NEFT Funds Transfer Network ?"],
+         "responses": ["No. As on September 2010, little over 70,000 branches / offices of 99 banks in the country (out of around 80,000 bank"]
+        },
+	{"tag": "NEFT3",
+         "patterns": ["Who Can Transfer Funds Using NEFT ?","who are eligible for neft transfer"],
+         "responses": ["Individuals, firms or corporates maintaining accounts with a bank branch can transfer funds using NEFT. Even such individuals, firms or corporates who do not have a bank account (walk-in customers) can also deposit cash at the NEFT enabled branch with instructions to transfer funds using NEFT. Such customers have to furnish full details including complete address, telephone number, etc. NEFT, thus, facilitates originators or remitters to initiate funds transfer transactions even without the need for having a bank account."]
+        },
+	{"tag": "NEFT4",
+         "patterns": ["Who Can Receive Funds Through The NEFT System ?",""],
+         "responses": ["Individuals, firms or corporates maintaining accounts with a bank branch can receive funds through the NEFT system. It is, therefore, necessary for the beneficiary to have an account with the NEFT enabled destination bank branch in the country."]
+        },
+	{"tag": "NEFT5",
+         "patterns": ["Is There Any Limit On The Amount That Could Be Transferred Using NEFT ?"],
+         "responses": ["Minimum – No limit,Maximum – Rs. 500.00 lacs"]
+        },
+	{"tag": "NEFT6",
+         "patterns": ["What Are The Operating Hours Of NEFT ?","which hours neft will operate"],
+         "responses": ["Presently, NEFT operates in hourly batches - there are twelve settlements from 8 am to 7 pm on week days and six settlements from 8 am to 1 pm on Saturdays."]
+        },
+	{"tag": "NEFT7",
+         "patterns": ["What Is The Minimum/Maximum Amount For NEFT Transactions Under Retail/Corporate Internet Banking "],
+         "responses": ["NEFT-Online for Retail Internet Banking Customers – Below Rs.2 lac as Maximum amount limit per transaction within the overall per day funds transfer limit of Rs.15 lac."]
+        },
+	{"tag": "NEFT8",
+         "patterns": ["How Does The NEFT System Operates"],
+         "responses": ["The remitter fills in the NEFT Application from giving the particulars of the beneficiary like, name of the beneficiary, name of the bank branch where the beneficiary has an account, IFSC of the beneficiary bank branch, account type and account number"]
+        },
+	{"tag": "NEFT9",
+         "patterns": ["What Is IFSC ?","IFSC mean"],
+         "responses": ["IFSC or Indian Financial System Code is an alpha-numeric code that uniquely identifies a bank-branch participating in the NEFT system. This is a 11 digit code with the first 4 alpha characters representing the bank code, 5th character is 0 (zero) and the last 6 numeric characters representing the branch code."]
+        },
+	{"tag": "NEFT10",
+         "patterns": ["How Can The IFSC Of A Bank-Branch Be Found ?"],
+         "responses": ["RBI had since advised all the banks to print IFSC on cheques leaves issued to their customers. IFSC code of Punjab National Bank branches can be found on our website. IFSCs is available on the website of Reserve Bank of India at http://www.rbi.org.in/scripts/neft.aspx"]
+        },
+	{"tag": "NEFT11",
+         "patterns": ["What Are The Processing Or Service Charges For NEFT Transactions ?"],
+         "responses": ["Rs. 2.50 + GST"]
+        },
+	{"tag": "NEFT12",
+         "patterns": ["When Can The Beneficiary Expect To Get The Credit To His Bank Account ?"],
+         "responses": ["The beneficiary can expect to get credit for the first ten batches on week days (i.e., transactions from 8 am to 5 pm) and the first five batches on Saturdays (i.e., transactions from 8 am to 12 noon) on the same day. For transactions settled in the last two batches on week days (i.e., transactions settled in the 6 and 7 pm batches) and the last batch on Saturdays (i.e., transactions handled in the 1 pm batch) beneficiaries can expect to get credit either on the same day or on the next working day morning."]
+        },
+	{"tag": "NEFT13",
+         "patterns": ["Who Should Be Contacted In Case Of Non-Credit Or Delay In Credit To The Beneficiary Account ?"],
+         "responses": ["In case of non-credit or delay in credit to the beneficiary account, the NEFT Customer Facilitation Centre (CFC) of the bank and Help Desk of the bank can be contacted .Details of NEFT Customer Facilitation Centres of our bank is available on the websites of our banks and detail of help desk"]
+        },
+	{"tag": "NEFT14",
+         "patterns": ["Can NEFT Be Used To Transfer Funds From / To NRE And NRO Accounts ?"],
+         "responses": ["Yes. NEFT can be used to transfer funds from or to NRE and NRO accounts in the country. This, however, is subject to the adherence of the provisions of the Foreign Exchange Management Act, 2000 (FEMA)."]
+        },
+	{"tag": "NEFT15",
+         "patterns": ["Can Inward Foreign Remittances Be Received Through NEFT ?"],
+         "responses": ["No. The NEFT system can be used only for remitting Indian Rupees between the participating bank branches within the country."]
+        },
+	{"tag": "NEFT16",
+         "patterns": ["Can Remittances Abroad Be Sent Using NEFT ?"],
+         "responses": ["No. However, a facility is available to send outward remittances to Nepal under the Indo-Nepal Remittance Facility Scheme."]
+        },
+	{"tag": "NEFT17",
+         "patterns": ["Can A Transaction Be Originated To Draw (Receive) Funds From Another Account ?"],
+         "responses": ["No. NEFT is a credit-push system i.e., transactions can be originated only to transfer funds to a beneficiary."]
+        },
+	{"tag": "NEFT18",
+         "patterns": ["Would The Remitter Receive An Acknowledgement Once The Funds Are Transferred To The Account Of The Beneficiary ?"],
+         "responses": ["Yes. In case of successful credit to the beneficiary`s account, the bank which had originated the transaction is expected to send a confirmation to the originating customer (through SMS or e-mail) advising of the credit as also mentioning the date and time of credit. For the purpose, remitters need to provide their mobile number / e-mail-id to the branch at the time of originating the transaction."]
+        },
+	{"tag": "NEFT19",
+         "patterns": ["Would The Remitting Customer Gets Back The Money, If It Is Not Credited To The Beneficiary Account ?"],
+         "responses": ["Would The Remitting Customer Gets Back The Money, If It Is Not Credited To The Beneficiary Account ?"]
+        },
+	{"tag": "NEFT20",
+         "patterns": ["Is There A Way For The Remitter To Track A Transaction In NEFT ?"],
+         "responses": ["Yes, the remitter can track the NEFT transaction through the originating bank branch. It is possible for the originating bank branch to keep track and be aware of the status of the NEFT transaction at all times."]
+        },
+	{"tag": "NEFT21",
+         "patterns": ["What Are The Pre-Requisites For Originating A NEFT Transaction ?"],
+         "responses": ["Originating and destination bank branches should be part of the NEFT network.,Beneficiary details such as beneficiary name, account number and account type.,Name and IFSC of the beneficiary bank branch."]
+        },
+	{"tag": "mp1",
+         "patterns": ["For Which Activities Loan Can Be Raised Under mp Scheme?"],
+         "responses": ["Loans can be provided under this scheme to both individuals as well as business enterprises for the purpose of meeting business and personal needs. Personal needs would cover children`s higher education, travel, daughter`s marriage, medical emergencies, etc. Loans, however, are not available for speculative purpose."]
+        },
+	{"tag": "mp2",
+         "patterns": ["Are Loans Available In Rural Areas?","Are Loans Available In Semi-Urban Areas?"],
+         "responses": ["Loans are available anywhere in India from PNB branches."]
+        },
+	{"tag": "mp3",
+         "patterns": ["What Is The Repayment Schedule For mp Scheme?"],
+         "responses": ["Loan together with interest is repayable in maximum 120 equal monthly instalments."]
+        },
+	{"tag": "mp4",
+         "patterns": ["What Is The Security To Be Provided For This Loan?"],
+         "responses": ["Loans can be provided under this scheme against non-encumbered residential house/flat or commercial or industrial property (in the shape of building/industrial shed) self occupied or vacant."]
+        },
+	{"tag": "mp6",
+         "patterns": ["What Is The Rate Of Interest To Be Charged On Loans Under This Scheme?"],
+         "responses": ["MCLR +1.75 to MCLR +6.00 based on PNB Score/Rating"]
+        },
+	{"tag": "Ecs",
+         "patterns": ["What Is Electronic Clearing Service (ECS) ?"],
+         "responses": ["ECS is a mode of electronic funds transfer for transactions that are repetitive and periodic in nature. ECS is used by institutions for making bulk payment of amounts towards distribution of dividend, interest, salary, pension, etc., or for bulk collection of amounts towards telephone / electricity / water dues, cess / tax collections, loan installment repayments, periodic investments in mutual funds, etc. Essentially, ECS facilitates bulk transfer of monies from one bank account to many bank accounts or vice versa using the services of a ECS Centre at a ECS location."]
+        },
+	{"tag": "Ecs2",
+         "patterns": ["What Are The Variants Of ECS? In What Way Are They Different From Each Other ?"],
+         "responses": ["Primarily, there are two variants of ECS - ECS Credit and ECS Debit."]
+        },
+	{"tag": "Ecs3",
+         "patterns": ["Who Can Initiate A ECS Credit Transaction ?"],
+         "responses": ["ECS Credit payments can be initiated by any institution (called ECS Credit User) who has to make bulk or repetitive payments to a number of beneficiaries. The institutional User has to first register with a ECS Centre. The User has to also obtain the consent of beneficiaries and get their bank account particulars prior to participation in the ECS Credit scheme."]
+        },
+	{"tag": "Ecs4",
+         "patterns": ["How Does The ECS Credit Scheme Work ?"],
+         "responses": ["The user intending to effect payments through ECS Credit has to submit details of the beneficiaries (like name, bank / branch / account number of the beneficiary, MICR code of the destination bank branch, etc.), date on which credit is to be afforded to the beneficiaries, etc., in a specified format (called the input file) through its sponsor bank to one of the approved ECS Centres."]
+        },
+	{"tag": "ECS5",
+         "patterns": ["What Is A MICR Code ?","MICR mean"],
+         "responses": ["MICR is an acronym for Magnetic Ink Character Recognition. The MICR Code is a numeric code that uniquely identifies a bank-branch participating in the ECS Credit scheme. This is a 9 digit code to identify the location of the bank branch; the first 3 characters represent the city, the next 3 the bank and the last 3 the branch. The MICR Code allotted to a bank branch is printed on the MICR band of cheque leaves issued by bank branches."]
+        },
+	{"tag": "ECS6",
+         "patterns": ["How Does A Beneficiary Participate In ECS Credit Scheme ?"],
+         "responses": ["The beneficiary has to furnish a mandate to the user institution giving consent to avail the ECS Credit facility. The mandate contains details of his bank branch, account particulars and authorizes the user institution to afford credit to his account with the destination bank branch."]
+        },
+	{"tag": "ECS7",
+         "patterns": ["Is It Necessary For User Institutions To Collect The Mandates From Beneficiaries ?"],
+         "responses": ["Yes. A model mandate form has been prescribed for the purpose (available at the location https://www.pnbindia.in). The securities market regulator (SEBI) has also issued guidelines to investors to furnish their bank account details in the share applications for printing the same on the physical interest / dividend warrants. Therefore, user institutions should not have difficulty in collecting the bank account particulars and mandates from beneficiaries. Payment processing by destination banks becomes smooth and easy once a database is prepared, maintained and updated by the user institutions."]
+        },
+	{"tag": "ECS8",
+         "patterns": ["Is There Scope For The Beneficiary To Alter The Mandate Under The ECS Credit Scheme ?"],
+         "responses": ["Yes. In case the information / account particulars contained in the mandate undergoes any change, the beneficiary has to notify the user institution with a request to carry out the requisite changes in order to continue to receive credits under the scheme. In case the account particulars contained in the input file do not match with the particulars as available at the destination bank branch for any reason whatsoever, the destination bank branches would return the credit (through their pooling centre known as the Service Branch) to the sponsor bank (for onward credit to the user institution) through the ECS Centre."]
+        },
+	{"tag": "ECS9",
+         "patterns": ["Will Beneficiaries Be Intimated Of Credits Afforded To Their Account Under The ECS Credit Scheme ?"],
+         "responses": ["It is the responsibility of the user institution to communicate to the beneficiary the details of credit that is being afforded to his account, indicating the proposed date of credit, amount and relative particulars of the payment. Destination banks have been advised to ensure that the pass books / statements given to the beneficiary account holders reflect particulars of the transaction / credit provided by the ECS user institutions. The beneficiaries can match the entries with the advice earlier received by them from the user institutions. Many banks also give mobile alerts/messages to customers post credits of funds to such accounts."]
+        },
+	{"tag": "ECS10",
+         "patterns": ["What Are The Advantages Of The ECS Credit Scheme To The Beneficiary ?"],
+         "responses": ["The beneficiary need not visit his bank for depositing the paper instruments, which he would have otherwise received had he not opted for ECS Credit.,The beneficiary need not be apprehensive of loss/theft of physical instruments or the likelihood of fraudulent encashment thereof. Cost effective."]
+        },
+	{"tag": "ECS11",
+         "patterns": ["How Does The ECS Credit Scheme Benefit User Institutions ?"],
+         "responses": ["Savings on administrative machinery for printing, dispatch and reconciliation of paper instruments that would have been used had beneficiaries not opted for ECS Credit."]
+        },
+	{"tag": "ECS12",
+         "patterns": ["Are There Any Advantages Of The ECS Credit Scheme To The Banking System ?"],
+         "responses": ["Yes,Freedom from paper handling and the resultant advantages of handling, presenting and monitoring paper instruments presented in clearing, had beneficiaries (having accounts with the destination bank branches) not opted for ECS Credit."]
+        },
+	{"tag": "ECS13",
+         "patterns": ["Is There Any Limit On The Value Of Individual Transactions In ECS Credit ?"],
+         "responses": ["No. There is no value limit on the amount of individual transactions."]
+        },
+	{"tag": "ECS14",
+         "patterns": ["What Are The Processing Charges Levied Under ECS Credit ?","What Are The Processing / Service Charges Levied Under ECS Credit ?"],
+         "responses": ["The Reserve Bank of India has deregulated the charges to be levied by sponsor banks from user institutions. The sponsor banks are, however, required to disclose the charges in a transparent manner. No processing charges are levied by the ECS Centres; the same has been waived till March 31, 2010. Destination bank branches have been directed to afford ECS Credit free of charge to the beneficiary account holders."]
+        },
+	{"tag": "ECS15",
+         "patterns": ["Who Can Initiate A ECS Debit Transaction ?"],
+         "responses": ["ECS Debit transaction can be initiated by any institution (called ECS Debit User) who has to receive / collect amounts towards telephone / electricity / water dues, cess / tax collections, loan instalment repayments, periodic investments in mutual funds, etc. It is a Scheme under which an account holder with a bank branch can authorise an ECS User to recover an amount at a prescribed frequency by raising a debit to his bank account."]
+        },
+	{"tag": "ECS16",
+         "patterns": ["How Does The ECS Debit Scheme Work ?"],
+         "responses": ["The ECS Debit User intending to collect receivables through ECS Debit has to submit details of the customers (like name, bank / branch / account number of the customer, MICR code of the destination bank branch, etc.), date on which the customer`s account is to be debited, etc., in a specified format (called the input file) through its sponsor bank to the ECS Centre."]
+        },
+	{"tag": "ECS17",
+         "patterns": ["What Are The Advantages Of ECS Debit Scheme To The Customers ?"],
+         "responses": ["ECS Debit mandates will take care of automatic debit to customer accounts on the due dates without customers having to visit bank branches."]
+        },
+	{"tag": "ECS18",
+         "patterns": ["How Does The ECS Debit Scheme Benefit User Institutions ?"],
+         "responses": ["User institutions enjoy many benefits from the ECS Debit Scheme like, Savings on administrative machinery for collecting the cheques from customers, presenting in clearing, monitoring their realisation and reconciliation."]
+        },
+	{"tag": "ECS19",
+         "patterns": ["What Are The Advantages Of ECS Debit Scheme To The Banking System ?"],
+         "responses": ["The banking system has many benefits from ECS Debit such as Freedom from paper handling and the resultant dis-advantages / delays of handling, receiving and monitoring paper instruments presented in clearing, had customers (having accounts with the destination bank branches) not opted for ECS Debit."]
+        },
+	{"tag": "ECS20",
+         "patterns": ["Can The Mandate Once Given By A Customer Be Withdrawn Or Stopped ?"],
+         "responses": ["Yes. Any mandate in ECS Debit is on par with a cheque issued by a customer. The customer has to maintain adequate funds in his account with the destination bank branch to ensure the ECS Debit instructions are honoured when presented. In case of any need to withdraw or stop a mandate, the customer has to give prior notice to the ECS user institution well in time, so as to ensure that the input files submitted by the user do not continue to include the ECS Debit details in respect of the mandates withdrawn or stopped by customers. The process flow to be followed for withdrawing / stopping mandates is detailed in ECS Debit Procedural Guidelines."]
+        },
+	{"tag": "ECS21",
+         "patterns": ["Can A Customer Stipulate A Ceiling On The Amount Of Debit, Purpose Or Validity Period Of The Mandate Under The ECS Debit Scheme ?"],
+         "responses": ["Yes. It is left to the choice of the individual customer and the ECS user to decide these aspects. The mandate can contain a ceiling on the maximum amount of debit; it can also specify the purpose of debit, as also a validity period."]
+        },
+	{"tag": "ECS22",
+         "patterns": ["Is There Any Limit On The Value Of Individual Transactions In ECS Debit ?"],
+         "responses": ["No. There is no value limit on the amount of individual transactions that can be collected by ECS Debit."]
+        },
+	{"tag": "ECS23",
+         "patterns": ["What Are The Processing Charges Levied Under ECS Debit ?","What Are The Service Charges Levied Under ECS Debit ?"],
+         "responses": ["No processing charges are levied by the ECS Centres; the same has been waived till March 31, 2010. Bank branches do not generally levy processing / service charges for debiting the accounts of customers maintained with them."]
+        },
+	{"tag": "aac",
+         "patterns": ["Who Can Open An Anupam Account ?","who is eligible to Open An Anupam Account ?"],
+         "responses": ["Account can be opened by individuals, sole proprietorship concerns, partnership firms, associations, trusts, limited companies etc. Minors are not eligible."]
+        },
+	{"tag": "aac2",
+         "patterns": ["What Is The Minimum Amount Of Deposit And Period For Opening The Account ?"],
+         "responses": ["Account can be opened with a minimum deposit of Rs.10,000/- for any period from 6 months to 120 months."]
+        },
+	{"tag": "aac3",
+         "patterns": ["Whether The Customer Can Avail Overdraft Against The Deposits Instantly And When A Chequebook For Overdraft Is Issued ?"],
+         "responses": ["Yes, Overdraft against the deposit is available instantly and automatically. A chequebook is issued at the time of accepting the deposit."]
+        },
+	{"tag": "aac4",
+         "patterns": ["Whether Simple Rate Of Interest Is Payable On Deposits ?","Whether Compound Rate Of Interest Is Payable On Deposits ?"],
+         "responses": ["Interest on deposit is paid on quarterly compounding basis at term deposit rates."]
+        },
+	{"tag": "Future Lease Rentals",
+         "patterns": ["For Which Activities Loan Can Be Raised Under Future Lease Rentals Scheme ?"],
+         "responses": ["Loans can be provided under this scheme to both individuals as well as business enterprises for the purpose of meeting business and personal needs. Loans, however, are not available for speculative purpose."]
+        },
+	{"tag": "FLR2",
+         "patterns": ["What Is The Repayment Schedule For This Scheme?"],
+         "responses": ["Normally, maximum repayment period under the scheme be allowed to 120 monthly instalments and the same be extended to maximum 144 months, subject to the availability of unexpired lease period."]
+        },
+	{"tag": "FLR3",
+         "patterns": ["What Is The Security To Be Provided For This Loan ?"],
+         "responses": ["Security under this scheme is to be provided as under: Assignment of lease rentals.Equitable mortgage of any immovable property to the extent of 100% of the loan"]
+        },
+	{"tag": "FLR4",
+         "patterns": ["What Is The Rate Of Interest To Be Charged On Loans Under This Scheme ?"],
+         "responses": ["0.70"]
+        },
+	{"tag": "FLR5",
+         "patterns": ["Are There Any Processing Charges For Loans Under This Scheme ?"],
+         "responses": ["Rs.270/- upto Rs.2 Lac + GST, Rs.450/- over Rs.2 Lac + GST"]
+        },
+	{"tag": "FLR6",
+         "patterns": ["Who Can Avail Loan From Your Bank Under The Scheme ?"],
+         "responses": ["Property owners having their properties situated in metro, urban, semi-urban and rural areas who have let out such properties to Public Sector Undertakings/Govt./Semi/State Govt. & reputed corporate firms."]
+        },
+	{"tag": "FLR7",
+         "patterns": ["How The Loan Is Disbursed ?"],
+         "responses": ["Through SF/CA account of the borrower or direct to the supplier"]
+        },
+	{"tag": "FLR*",
+         "patterns": ["What Will Be The Quantum Of The Loan ?"],
+         "responses": ["As per the remaining period of the lease."]
+        },
+	{"tag": "krishi cards",
+         "patterns": ["Can I Raise Loan Under krishi cards  For Activities Other Than Agriculture ?"],
+         "responses": ["Yes, for other rural household requirements such as education, consumable items, medical expenses, etc. up to 25% of the limit or Rs.25,000/- whichever is lower"]
+        },
+	{"tag": "kc2",
+         "patterns": ["Do I Need Minimum Qualification To Be Eligible Under krishi cards Scheme ?"],
+         "responses": ["No"]
+        },
+	{"tag": "kc3",
+         "patterns": ["If I Have 5 Acre Of Unirrigated Land, Am I Eligible Under The Scheme ?"],
+         "responses": ["Yes"]
+        },
+	{"tag": "kc4",
+         "patterns": ["Can I Take The Payment From The Other Branches Also ?"],
+         "responses": ["Yes, but within the same district whereas the illiterate cardholders will avail the facility from the issuing branch only"]
+        },
+	{"tag": "kc5",
+         "patterns": ["Do I Have To Pay Any Additional Fee/Charge For Withdrawing Cash From Other Than The Issuing Branch ?"],
+         "responses": ["Yes, if you withdraw cash from the branch other than the issuing branch a commission @2% is charged and the same is deducted from the cash withdrawn."]
+        },
+	{"tag": "kc6",
+         "patterns": ["If I Want To Renew My Krishi Card What Formalities Are Required ?"],
+         "responses": ["You should approach the issuing branch one month before the expiry of the card with a written request for the same."]
+        },
+	{"tag": "kc7",
+         "patterns": ["Is There Any Concept Of The Margin Under The Scheme ?"],
+         "responses": ["For limits up to Rs. 2,00,000/-, the margin requirements are nil. For limits above Rs.200,000/- up to Rs. 3,00,000/-, margin requirement is 10%."]
+        },
+	{"tag": "kc8",
+         "patterns": ["In Case Of Loss Of Card/Passbook What Are The Formalities ?"],
+         "responses": ["Inform the card issuing branch by quickest means and a new card is re-issued on payment of nominal charges of Rs.200/-."]
+        },
+	{"tag": "kc9",
+         "patterns": ["How Do You Work Out The Eligible Limit ?"],
+         "responses": ["The limit is worked out on the basis of your total income from farm as well as non-farm activities, extent of land holding, acreage and average yield of crops grown, price realisations etc"]
+        },
+	{"tag": "kc10",
+         "patterns": ["How Do I Repay The Amount Raised Against The Card ?"],
+         "responses": ["Aggregate credits into the account during the 12/18 months period as the case may be, should at least be equal to the maximum outstanding in the account. "]
+        },
+	{"tag": "Education Loan",
+         "patterns": ["How Many Education Loan Schemes Are There ?"],
+         "responses": ["There are 4 Education Loan Schemes : PNB Saraswati,PNB Udaan,PNB Kaushal,PNB Pratibha"]
+        },
+	{"tag": "EL2",
+         "patterns": ["What Is The Objective Of Bank`S Education Loan Schemes ?","Objective Of Bank`S Education Loan Schemes"],
+         "responses": ["PNB Saraswati The Education Loan Scheme PNB Saraswati aims at providing financial support to meritorious students for pursuing higher education in India.,PNB Kaushal- The Education Loan Scheme PNB Kaushal aims at providing financial support from the banking system to those who have the minimum educational qualification, as required by the institution / organization running the course eligible under the scheme.,"]
+        },     
+        {"tag": "downtime",
+         "patterns": ["What is this downtime for ?"],
+         "responses": ["In our continuous endeavour to provide you superior banking experience, we are upgrading our systems and there will be scheduled downtime of servers from 10-Feb-2017 6:00 PM to 13-Feb-2017 9:00 AM"]
+        }, 
+        {"tag": "carloan",
+         "patterns": ["How Much Amount Can Be Sanctioned Under Car Loan Scheme?"],
+         "responses": [" To Individuals – 25 times net monthly salary/income. (Max. Amount of Loan - Rs. 100 lacs)."]
+        },     
+        {"tag": "cl1",
+         "patterns": ["Is There Any Income Criteria For Availing The Loan ?"],
+         "responses": ["Yes, Minimum net monthly salary / pension/ income of Rs.20,000/- is required."]
+        },     
+        {"tag": "CL2",
+         "patterns": ["Can A Car Loan Be Sanctioned For Purchase Of Old Car ?"],
+         "responses": ["Yes, loan can be sanctioned for vehicles which are not older than 3 years."]
+        },     
+        {"tag": "CL3",
+         "patterns": ["How Much Amount Is The Borrower Required To Contribute ?"],
+         "responses": ["For new vehicles, borrower is required to contribute 10% in case of purchase of vehicles from Maruti, Tata Motors, Hyundai , Honda , Mahindra & Mahindra. Extreme & Force Motors Ltd., with whom Bank is having a tie up arrangement."]
+        },     
+        {"tag": "CL4",
+         "patterns": ["What Is Maximum Repayment Period Under Car Loan Scheme ?"],
+         "responses": ["For new Vehicles: Max 84 months, For Old Vehicles: Max 60 months"]
+        },     
+        {"tag": "cl5",
+         "patterns": ["What Is The ROI On Car Loans ?"],
+         "responses": ["MCLR+0.25% to MCLR+0.60%"]
+        },     
+        {"tag": "Depository Services",
+         "patterns": ["What Is A Depository ?"],
+         "responses": ["Depository is an organization where the securities of a shareholder are held in the electronic form. This is done at the request of the shareholder through the medium of a Depository Participant (DP). A depository is similar to a Bank. If an Investor wants to utilize the services offered by a depository, he/she has to open an account with the depository through a DP."]
+        },     
+        {"tag": "ds1",
+         "patterns": ["What Is A Depository Participant ?"],
+         "responses": ["DP is your representative in the depository system and is similar to your bank branch. Your DP will maintain your securities account balances and intimate to you the status of your holdings from time to time. According to SEBI guidelines, financial institutions, banks, custodians, stock brokers etc., can become depository participants. PNB is a registered DP with National Securities Depository Limited (NSDL)."]
+        },     
+        {"tag": "ds2",
+         "patterns": ["What Are Benefits Of Opening A Demat A/C ?"],
+         "responses": ["Quick transfer of securities,No stamp duty on transfer of securities"]
+        },     
+        {"tag": "ds3",
+         "patterns": ["What Is A Authorized Branch Of D.P ?"],
+         "responses": ["For extending the benefits of depository services to our clients, a number of braches are authorized to maintain your securities account. They are dealing with a centralized Depository participant (PNB)."]
+        },
+	{"tag": "ds4",
+         "patterns": ["Why Should An Investor Prefer To Buy Shares In The Depository Mode "],
+         "responses": ["When you buy shares in the depository mode you will become the owner of those shares in the depository within a day of the settlement being completed. You will not have to apply to the Company for registering the shares in your name. Thus, there will be no possibility of loss or theft when the share certificates are posted to the company. You will have no fear that any fake or stolen shares may have been delivered to you."]
+        },
+	{"tag": "ds5",
+         "patterns": ["What Is Dematerialisation ?"],
+         "responses": ["Dematerialisation is a process by which the physical certificates of an investor are taken back by the Company / Registrar and actually destroyed and an equivalent number of securities are credited in the electronic holdings of that investor. This is done at the request of the investor. An investor will have to first open an demat account with a DP and then request for the dematerialisation of his certificates through th DP so that the dematerialised holdings can be credited into that account."]
+        },
+	{"tag": "ds6",
+         "patterns": ["Can My Electronic Holdings Be Converted Back Into Certificates ?"],
+         "responses": ["Yes. If you wish to get back your securities in the physical form all you have to do is to request the DP for the Rematerialisation of the same. Rematerialisation is the term used for converting electronic holdings back into certificates. The authorized branch will forward your request to NSDL through our DP after verifying that you have the necessary security balances. NSDL in turn will intimate the registrar who will print the certificates and dispatch the same to you."]
+        },     	
+	{"tag": "ds7",
+         "patterns": ["How Will An Investor Know That His DP Has Updated His Account After Each Transaction ?"],
+         "responses": ["Just like a bank branch, the authorized branch will give you a statement of account. The statement of account will be dispatched to you periodically by the DP."]
+        },     	
+	{"tag": "ds8",
+         "patterns": ["What If There Are Any Discrepancies In The Statement ?"],
+         "responses": ["In case of any discrepancy in the statement of account, you can contact the DP. If the discrepancy cannot be resolved at the DP level an investor may approach NSDL for clarification."]
+        },     	
+	{"tag": "ds9",
+         "patterns": ["What Happens If I Lose My Account Statement ?"],
+         "responses": ["Simple, inform the authorized branch and obtain a duplicate account statement . Your statement cannot be used by anybody else for trading in your account."]
+        },     	
+	{"tag": "ds10",
+         "patterns": ["Is An Investor Restricted From Having Account With Only One DP ?"],
+         "responses": ["There are absolutely no restrictions to the number of DPs you can open accounts with."]
+        },     	
+	{"tag": "ds11",
+         "patterns": ["Does An Investor Have To Keep Any Minimum Balance Of Securities In His Client Account ?"],
+         "responses": ["No, the depository has not prescribed any minimum balance. In fact, you can even have zero balance in your account."]
+        },     	
+	{"tag": "ds12",
+         "patterns": ["What Security Do I Have If The Only Proof Of My Holdings In The Depository Is Merely A Piece Of Paper Indicating My Account Balance ?"],
+         "responses": ["When you open an account with an authorized branch, you sign an agreement with the DP in which the DP indemnifies you for any misuse of your holdings. The depository will also ensure that the interests of the investors are protected so your grievances, if any, against the DP will be resolved by the depository"]
+        },     
+	{"tag": "ds13",
+         "patterns": ["Is It Possible For Me To Get The Securities Allotted To Me In Public Offerings Directly In The Electronic Form ?"],
+         "responses": ["Definitely, in fact the public issue application form itself contains a provision for you to indicate the manner in which you want the securities to be allotted to you. All you have to do is to mention your client account number and the name of the DP and any allotment due to you will be credited into that account."]
+        },     	
+	{"tag": "ds14",
+         "patterns": ["Who Will Give Me The Benefits Arising Out Of My Holdings, Say A Bonus Or Dividend ?"],
+         "responses": ["When any corporate event such as rights, bonus or dividend is announced for a particular security, the depository will give all the details of the clients having electronic holdings of that security as of record date/book closure to the registrar. The registrar will then calculate the corporate benefits due to all the shareholders. The disbursement of cash benefits such as dividend/interest will be done by the registrar whereas the distribution of securities entitlements will be done by the depository based on the information provided by the registrar."]
+        },    
+ 	{"tag": "ds121",
+         "patterns": ["Do I Have Any Option For The Manner In Which I Wish To Receive My Corporate Benefits ?"],
+         "responses": ["In case of those corporate events where you can exercise your option such as rights issue or optional conversion of debentures to shares, you do have a choice of either physical or electronic"]
+        },    
+ 	{"tag": "Dematerialisation",
+         "patterns": ["Can An Investor Dematerialise Any Share Certificate ?"],
+         "responses": ["The investor can dematerialise only those certificates that are already registered in his name and belong to the list of securities admitted for dematerialisation at NSDL. Shares held in street name (market deliveries) cannot be dematerialised"]
+        },    
+ 	{"tag": "ds1",
+         "patterns": ["Is A Transfer Deed Required For Dematerialising Certificates ?"],
+         "responses": ["No. The certificates have to be accompanied by a Demat Request Form (DRF) which can be obtained from the authorized branch and there is no need for a transfer deed."]
+        },    
+ 	{"tag": "ds2",
+         "patterns": ["Can An Investor Dematerialise Shares, Which Are Pledged With A Bank, Which Is A DP As Well ?"],
+         "responses": ["The investor can, with the permission of the bank."]
+        },    
+ 	{"tag": "ds3",
+         "patterns": ["Do Dematerialised Shares Have Distinctive/ Certificate Numbers ?"],
+         "responses": ["No. Dematerialised shares do not have any distinctive or certificate numbers. These shares are fungible - which means that 100 shares of a security are the same as any other 100 shares of that security."]
+        },    
+ 	{"tag": "ds4",
+         "patterns": ["Can Odd Lot Shares Be Dematerialised ?"],
+         "responses": ["Yes. Odd lot share certificates can also be dematerialised."]
+        },    
+ 	{"tag": "ds5",
+         "patterns": ["Is Dematerialisation Compulsory ?"],
+         "responses": ["No. According to the Depositories Act, 1996, an investor has the option to hold shares either in physical or in dematerialised form."]
+        },    
+ 	{"tag": "ds6",
+         "patterns": ["Is It Compulsory To Mention The ISIN Number Of The Company While Filling Up The Demat Request Form ?"],
+         "responses": ["Yes, the ISIN name and number should be mentioned. This, to a certain extent, ensures that the security mentioned in the Demat Request Form is the same as the one the client intends to dematerialise. However, the client need not remember cryptic numbers and can take the help of his DP in filling these forms, which we will gladly do it for him."]
+        },    
+ 	{"tag": "Rematerialisation",
+         "patterns": ["Does NSDL Keep Blank Share Certificates Of Companies ?"],
+         "responses": ["During a Rematerialisation process, the request goes from the DP to the R&T agent via NSDL. The R&T Agent, after processing the request, will print and despatch the share certificate directly to the investor. In this process, NSDL does not directly handle certificates."]
+        },    
+ 	{"tag": "rm1",
+         "patterns": ["What Should The Investor Do If His Name Has Been Wrongly Spelt On The Certificates Given To Him After A Remat ?"],
+         "responses": ["During a remat the instruction from the investor travels to the R&T agent from the DP via NSDL. The R&T agent processes it and sends the certificate, with the name printed as it appears in the beneficiary account, to the investor directly. Despite this, if the name is mis-spelled, then the investor can send it for rectification to the R&T agent along with the relevant documents."]
+        },    
+ 	{"tag": "rem2",
+         "patterns": ["Can Odd Lot Securities Be Rematerialised ?"],
+         "responses": ["The investor has the option of rematerialising his total holdings or part of it. In addition to this, he has the option to get the certificates in market lot or jumbo lot. In view of this, beneficiary owners can remat their securities even if it is an odd lot."]
+        },   
+  	{"tag": "rem3",
+         "patterns": ["Since Depository Is The Registered Holder In Company`S Books, Will A Remat Be A Case Of Transfer From Depository To Investor And A Stamp Duty Charged On It ?"],
+         "responses": ["No. Transfer of registered ownership of securities from a person to a depository or from a depository to a beneficial owner shall not be liable to stamp duty related to transfer."]
+        },    
+ 	{"tag": "Pledging",
+         "patterns": ["Can Locked-In Securities Be Pledged ?"],
+         "responses": ["Yes. However they cannot be invoked before the lock-in release date."]
+        },    
+ 	{"tag": "pn1",
+         "patterns": ["Who Will Receive Corporate Action Benefits On The Pledged Securities ?"],
+         "responses": ["Even after the securities are pledged, the pledgor continues to remain the beneficiary holder of those securities and will receive benefits of a corporate action, if any."]
+        },    
+ 	{"tag": "Corporate Actions",
+         "patterns": ["How Will The Investor Receive Dividend/Interest, If Any, On The Securities He Is Holding ?"],
+         "responses": ["NSDL gives the issuer/ R&T agent of the security for which dividend has been announced a list of beneficial owners as of the record/ book closure date. Based on this list provided by NSDL, the issuer/ R&T agent directly forwards dividend payment to the investor, as in case of the physical environment. Presently, NSDL does not handle cash corporate actions"]
+        },     
+	{"tag": "cac1",
+         "patterns": ["If An Investor Has Holdings In Dematerialised Form Will The Bonus/ Rights Issue Against This Be In The Same Form ?"],
+         "responses": ["The bonus/rights issue against holding in dematerialized form can be either in the physical/dematerialised form as per the choice of the investor. If no choice is given, then by default the securities will be issued in the form they are currently held. Thus if a shareholder holds some shares in physical form and some others in demat, then bonus/rights shares will be received in both the forms in proportion to the holdings in each form."]
+        },    
+ 	{"tag": "cac2",
+         "patterns": ["Will The Rights Issue Form Be Sent By The Depository Or Issuer ?"],
+         "responses": ["As in the physical segment the issuer/ their R&T agent will mail the rights form directly to all investors including those in the electronic segment."]
+        },   
+  	{"tag": "ca2",
+         "patterns": ["How Will The Investor Confirm That He Has Received His Bonus/ Rights Entitlement ?"],
+         "responses": ["The statement of holding and transaction statement sent by the investors DP, will show the bonus/ rights credit into his account. This report is sent to the investor on monthly basis. In addition, an allotment advise will be send by the issuer/ their R&T agent for bonus/ rights entitlement."]
+        },   
+  	{"tag": "Public Offerings",
+         "patterns": ["Does The Applicant Get Preference In Allotment If He Applies In Dematerialised Form ?"],
+         "responses": ["The basis of allotment is independent of the form (physical/ dematerialised) in which securities are applied. Thus the applicant won`t get preference in allotment if he applies for securities in dematerialised form."]
+        },   
+  	{"tag": "pa1",
+         "patterns": ["If The Applicant Is Allotted Securities In Dematerialised Form, When Will He Get Electronic Credit In His Account ?"],
+         "responses": ["If securities are allotted in the dematerialised form, these would be credited to applicants account any day between allotment date and listing date, at the discretion of the company."]
+        },   
+  	{"tag": "pa2",
+         "patterns": ["How Will The Applicant Come To Know That His Application For Public Issue In Electronic Form Has Been Accepted ?"],
+         "responses": ["The issuer company/ their R&T agent will forward the applicant the allotment advise giving the number of shares allotted in dematerialised form."]
+        },    
+ 	{"tag": "Housing Finance",
+         "patterns": ["Who Is Eligible For A Housing Loan ?"],
+         "responses": ["Individuals in the age group 18-70 years having regular income wishing to own residential properties in India are eligible to avail Housing Loan."]
+        },    
+ 	{"tag": "hf1",
+         "patterns": [""],
+         "responses": [""]
+        },     	{"tag": "",
+         "patterns": [""],
+         "responses": [""]
+        },     	{"tag": "",
+         "patterns": [""],
+         "responses": [""]
+        },          
+       
+   
+     
+     
+   ]
+}
+
+
+   
+
+
+	
+
+
